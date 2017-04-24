@@ -4,6 +4,7 @@ import $ from 'jquery'
 
 class AppState {
   @observable timer = 0;
+  @observable videoList = []
 
   constructor() {
     setInterval(() => {
@@ -28,18 +29,16 @@ class AppState {
         maxResults: 10,
         key: 'AIzaSyC08ULv9IlOoF4vSZvkyX4E3lviClgnqjM',
       },
-      success(response) {
-        debugger
-        // this.videoList = response.items
+      success: (response) => {
+        this.videoList = response.items
       },
-      error(response) {
+      error: (response) => {
         this.errors = {
           fetchingVideosError: 'There was an error fetching the videos'
         }
       }
     })
   }
-
 }
 
 export default AppState;

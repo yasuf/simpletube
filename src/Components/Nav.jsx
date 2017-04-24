@@ -1,11 +1,11 @@
 import React from 'react'
 import { debounce } from 'lodash'
 
-const SearchBar = ({ fetchYoutubeVideos }) => {
+const Nav = ({ fetchYoutubeVideos }) => {
   const debouncedFetchYoutubeVideos = debounce(fetchYoutubeVideos, 500, { trailing: true})
   return (
     <div className="search-bar">
-      <div className="input-group">
+      <div className="col-md-6 col-md-offset-3">
         <input
           type="text"
           class="form-control"
@@ -19,4 +19,4 @@ const SearchBar = ({ fetchYoutubeVideos }) => {
   )
 }
 
-export default SearchBar
+export default Nav

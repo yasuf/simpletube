@@ -2,19 +2,25 @@ import React, { Component } from 'react';
 import { observer } from 'mobx-react';
 import DevTools from 'mobx-react-devtools';
 
-import MainContainer from './MainContainer'
+import Nav from './Nav'
+import VideosList from './VideosList'
 
 @observer
 class App extends Component {
+
+  fetchYoutubeVideos = (query) => {
+    this.props.appState.fetchYoutubeVideos(query)
+  }
+
   render() {
     return (
       <div>
-        <MainContainer
-          fetchYoutubeVideos={ this.props.appState.fetchYoutubeVideos }
+        <Nav
+          fetchYoutubeVideos={ this.fetchYoutubeVideos }
         />
-        {/* <button onClick={ this.onReset }>
-            Seconds passed: { this.props.appState.timer }
-            </button> */}
+        <VideosList
+          data={ this.props.appState.videoList }
+        />
         <DevTools />
       </div>
     );
