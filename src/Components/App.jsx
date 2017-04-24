@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import { observer } from 'mobx-react';
 import DevTools from 'mobx-react-devtools';
 
-import SearchBar from './SearchBar'
+import MainContainer from './MainContainer'
 
 @observer
 class App extends Component {
   render() {
     return (
-      <div className="main-container">
-        <SearchBar />
-        <button onClick={ this.onReset }>
-          Seconds passed: { this.props.appState.timer }
-        </button>
+      <div>
+        <MainContainer
+          fetchYoutubeVideos={ this.props.appState.fetchYoutubeVideos }
+        />
+        {/* <button onClick={ this.onReset }>
+            Seconds passed: { this.props.appState.timer }
+            </button> */}
         <DevTools />
       </div>
     );
