@@ -4,6 +4,9 @@ import { AppContainer } from 'react-hot-loader';
 import AppState from './AppState';
 import App from './App';
 
+import 'jquery'
+import 'bootstrap'
+
 const appState = new AppState();
 
 render(

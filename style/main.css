@@ -1,0 +1,78 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css?family=Amaranth');
+
+.main-container {
+  text-align: center;
+  padding: 30px;
+}
+
+.navbar {
+  background: #63374d;
+}
+.navbar input {
+  margin-top: 8px;
+  padding: 5px 10px 3px;
+  width: 500px;
+  border-radius: 4px;
+  border: solid 1px #ccc;
+}
+
+.video-player-details {
+  background: #fff;
+  padding: 8px;
+  border: 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  margin-top: 10px;
+}
+
+.video-list {
+  background: #fff;
+  padding: 8px;
+  border: 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
+.video-list-entry {
+  font-size: 16px;
+  padding: 8px;
+}
+
+.video-list-entry-title {
+  font-weight: bold;
+}
+
+.video-list-entry-title:hover {
+  color: #e62117;
+  cursor: pointer;
+}
+
+.video-list-entry-detail {
+  font-size: 12px;
+  color: #999;
+}
+
+.video-player {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 20px;
+}
+
+.logo-title {
+  margin-top: 15px;
+  padding-left: 32px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: white;
+  font-family: 'Amaranth', sans-serif;
+}
+
+@media (max-width: 1000px) {
+  .logo-title {
+    display: none;
+  }
+  .navbar input {
+    width: 100%;
+  }
+}
