@@ -8,7 +8,7 @@ const VideosList = (props) => {
       { props.data.map((video, i) => {
           return <VideoListItem
                    data={ video }
-                   onVideoEntryClick={ props.onListEntryClick }
+                   onVideoEntryClick={ props.selectVideo }
                  />
         })
       }

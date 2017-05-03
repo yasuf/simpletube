@@ -1,22 +1,32 @@
 import React from 'react'
 import { debounce } from 'lodash'
 
-const Nav = ({ fetchYoutubeVideos }) => {
-  const debouncedFetchYoutubeVideos = debounce(fetchYoutubeVideos, 500, { trailing: true})
-  return (
-    <div className="search-bar">
-      <div className="col-md-6 col-md-offset-3">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Start typing to search for videos.."
-          onChange={ (event) => {
-              debouncedFetchYoutubeVideos(event.target.value)
-            }}
-        />
+class Nav extends React.Component {
+
+  componentDidMount() {
+    this.textInput.focus()
+  }
+
+  render() {
+    const { fetchYoutubeVideos } = this.props
+    const debouncedFetchYoutubeVideos = debounce(fetchYoutubeVideos, 500, { trailing: true})
+    return (
+      <div className="navbar navbar-default">
+        <div className="col-md-3 logo-title">Simpletube.co</div>
+        <div className="col-md-6">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Start typing to search for videos.."
+            onChange={ (event) => {
+                debouncedFetchYoutubeVideos(event.target.value)
+              }}
+            ref={ (c) => this.textInput = c}
+          />
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default Nav

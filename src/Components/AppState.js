@@ -5,6 +5,7 @@ import $ from 'jquery'
 class AppState {
   @observable timer = 0;
   @observable videoList = []
+  @observable selectedVideo = {}
 
   constructor() {
     setInterval(() => {
@@ -14,6 +15,10 @@ class AppState {
 
   resetTimer() {
     this.timer = 0;
+  }
+
+  selectVideo(video) {
+    this.selectedVideo = video
   }
 
   fetchYoutubeVideos(query) {

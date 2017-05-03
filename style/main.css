@@ -1,14 +1,16 @@
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css?family=Amaranth');
 
 .main-container {
   text-align: center;
   padding: 30px;
 }
 
-.search-bar {
-  display: inline-block;
+.navbar {
+  background: #63374d;
 }
-.search-bar input {
+.navbar input {
+  margin-top: 8px;
   padding: 5px 10px 3px;
   width: 500px;
   border-radius: 4px;
@@ -47,4 +49,30 @@
 .video-list-entry-detail {
   font-size: 12px;
   color: #999;
+}
+
+.video-player {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 20px;
+}
+
+.logo-title {
+  margin-top: 15px;
+  padding-left: 32px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: white;
+  font-family: 'Amaranth', sans-serif;
+}
+
+@media (max-width: 1000px) {
+  .logo-title {
+    display: none;
+  }
+  .navbar input {
+    width: 100%;
+  }
 }
