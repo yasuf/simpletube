@@ -1,12 +1,10 @@
-mobx-react-boilerplate
+Simpletube, a simple React with mobx youtube client
 =====================
 
-A minimal application that combines [MobX](https://mobxjs.github.io/mobx) with [React](https://facebook.github.io/react).
-Supports ES6 and JSX compilation through babel.
+### Overview
+This is a minimal application that uses the latest front-end technologies. In this project you can see examples of [React](https://facebook.github.io/react) Components, webpack bundling, [mobx](https://github.com/mobxjs/mobx) and an integration with Youtube's API
 
-* For a more sophisticated project to start with, see the full TodoMVC implementation: [mobx-react-todomvc](https://github.com/mobxjs/mobx-react-todomvc).
-
-### Run the example
+### Run the project
 
 ```
 npm install
@@ -14,7 +12,7 @@ npm start
 open http://localhost:3000
 ```
 
-
 ### Credits
 
-* [Mendix](http://github.com/mendix) for providing the opportunity to battle test this approach (we're hiring!).
+Special thanks to the creators of mobx, this project is based off of this boilerplate
+[mobx-react-boilerplate](https://github.com/mobxjs/mobx-react-boilerplate)

@@ -13,7 +13,7 @@ class Nav extends React.Component {
     return (
       <div className="navbar navbar-default">
         <div className="col-md-3 logo-title">Simpletube.co</div>
-        <div className="col-md-6">
+        <div className="col-md-6 main-search-field">
           <input
             type="text"
             class="form-control"
