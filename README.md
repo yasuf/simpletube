@@ -1,8 +1,12 @@
-Simpletube, a simple React with mobx youtube client
+Simpletube, a simple React and Mobx YouTube client
 =====================
 
 ### Overview
 This is a minimal application that uses the latest front-end technologies. In this project you can see examples of [React](https://facebook.github.io/react) Components, webpack bundling, [mobx](https://github.com/mobxjs/mobx) and an integration with Youtube's API
+
+### Demo
+[Simpletube.co](http://simpletube.co)
+
 
 ### Run the project
 
